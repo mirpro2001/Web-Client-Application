@@ -14,7 +14,7 @@ class Request(models.Model):
         verbose_name_plural = "Информация о заявках на обучение"
 
     Request_Code = models.AutoField(primary_key=True, verbose_name="Код заявки")
-    Request_Name = models.IntegerField(verbose_name="Наименование заявки")
+    Request_Name = models.CharField(max_length=100, verbose_name="Наименование заявки")
     Request_Date_Submitted = models.DateTimeField(verbose_name="Дата поступления заявки")
     Request_Status = models.CharField(max_length=20, verbose_name="Статус заявки")
 
